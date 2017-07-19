@@ -1,5 +1,5 @@
 # AeFi
-Git repository for the AeFi project (pronounced aye-e-fye). Brought to you by Aetherfy, LLC (pronounced ether-fy). 
+Git repository for the AeFi project (pronounced aye-e-fye). Brought to you by Aetherfy, LLC (pronounced ether-fye). 
 
 URL http://aetherfy.com
 
