@@ -32,6 +32,7 @@ Phase II. ???
 Phase III. Profit! Actually, the opposite. We'll build and sell (as needed) the wireless gateways that are needed to build the AeFi network. But the act of enabling users to share their excess wireless bandwidth with each other will drive down the cost of data for everyone, and is wholly disruptive to existing mobile data business models. The AeFi network, as a service, keeps money in the user's pocket, and out of the hands of the service provider. While this may hurt corporate profits (as suggested above), it is this liberation of data that will also enable more connected devices, greater performance, and heretofore unimagined creations. 
 
 /******************************************************************************/
+
 -- Contributors (NEEDED) --
 We are currently seeking open-source contributors with experience creating smart contracts on the ethereum platform. We need embedded hardware and software engineers with experience using C and C++ together with real-time operating systems. Engineers with LAN, cellular, and wireless networking knowledge are needed most of all. UI/UX designers are evidently an important piece, too. If you'd like to talk about working on the project, please send us an email at info@aetherfy.com.  We appreciate your support on this important project!
 
