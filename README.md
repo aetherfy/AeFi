@@ -36,11 +36,14 @@ The AeFi project is an open-source development project for creating:
 1) A wifi gateway (hardware + software) that will share its network connection to AeFi clients. 
 Collectively, the gateways form a "last mile" network of wireless nodes that AeFi clients can hop to/from, 
 as an alternative to using a cellular network. Unlike ISP-based mobile hotspots, you do not have to be a 
-subscriber to use the network. You merely need an AeFi address and a little bit of the AeFi token to get going. 
-The exchange of tokens for data is documented by the formation of an ethereum-based smart contract between two 
-parties (a host, and a client). The special sauce of this project lies in the gateways/routers, which have a 
-secured data meter that is used to verify the amount of data transferred between the client and host. Once the user
-disconnects, or consumes all of their token, the host will terminate the transaction by issuing 
+subscriber to use the network. You merely need an AeFi address and a little bit of the AeFi (AEF) token to get going. 
+The special sauce of this project lies in the gateway/router, which must have: 
+1) A means of securely metering data, and
+2) A means of debiting the client's token account automatically.
+
+Once the client disconnects, or consumes all of their token, the host will terminate the transaction by closing the 
+connection with the client, accumulating the data/token that was spent, and then using the account details provided 
+by the client to debit the client account.
 
 2) Mobile client software to run on iOS and Android handsets. This software will need to be able to arbitrate 
 connections with the AeFi gateways, and "hop" between these networks to improve the customer experience. 
@@ -51,27 +54,40 @@ this challenge, as well.
 
 /******************************************************************************/
 
+-- Progress --
+
+Week of 8/6/2017: 
+1. Installed LEDE/OpenWRT on linksys WRT1200AC router. 
+2. Cross-compiled go-ethereum for Linux and ARMv7 CPU architecture. 
+3. Loaded go-ethereum binary onto router, but it fails to run, at the moment.
+4. Mounted 64GB USB thumb drive on router. The drive will store a light version of the ethereum blockchain.
+5. Began looking into LEDE SDK, and trying to debug #3.
+
 -- Future Work --
 At this time, it is all future work. But we see that as the AeFi network grows in size, and more gateways appear for
 clients to connect to, we'll add an incentive structure for gateway hosts who to compete on delivering the fastest speeds. 
 An interactive "data priority scheduler" will also be developed that would allow the client to dictate how fast 
 they need to move data and can choose alternative modes of transport (e.g. full wireless mesh networking, 
 rather than over an ISP's landline). Another service the AeFi network may offer: security. Embedded VPN in the router
-could prevent both the ISP from viewing the transmitted data. Ideally, the client's data is also hidden from the host, although
-it is not clear how that would be accomplished, at this time.
+could prevent both the ISP from viewing the transmitted data. Ideally, the client's data is also encrypted and not interceptable
+by the host, e.g. truly "trustless" although it is not clear how that will be accomplished, at this time.
 
 The project will be broken up into phases. Just like ethereum, we'll need someone who can come up with catchy names for
 each of these. For now, they are:
 Phase I. To get going, a "hello world" type demonstration wherein we connect mobile clients to a host, exchange tokens 
 for data, and verify that the transfer took place.
-Phase II. ???
-Phase III. Profit! Actually, the opposite. Aetherfy, LLC will configure and sell out-of-the-box wireless gateways 
-that are needed to build the AeFi network. But as an open-source project, the software will be free for others to download,
+Phase II. Beta network buildout. We issue some test tokens to a small network of beta testers. We have a router-flashing
+party where people come in, and we'll flash the software on their routers, and help them get set up. The ultimate goal is to have 
+a group of users in a concentrated geographical area that can serve as a test bed and a small-scale simulation of a much larger
+network. 
+
+Phase III. Liberty! Aetherfy, LLC will configure and sell out-of-the-box AeFi gateways on an as-needed basis to help build 
+the AeFi network. But as an open-source project, the software will be free for others to download,
 install, adapt, and run on their own. The act of enabling users to share their excess wireless bandwidth with each other 
 will drive down the cost of data for everyone, and is wholly disruptive to existing mobile data business models. 
 The AeFi network, as a service, keeps money in the user's pocket, and out of the hands of the service provider. 
-While this may hurt corporate profits (as suggested above), it is this liberation of data that will also enable more 
-connected devices, greater performance, and heretofore unimagined creations. 
+While this may hurt some stakeholders' profits, it is this liberation of data that will also enable more 
+connected devices, greater performance, better privacy, and heretofore unimagined creations. 
 
 /******************************************************************************/
 
